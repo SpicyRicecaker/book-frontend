@@ -1,0 +1,68 @@
+@use "themes.scss";
+@use "media.scss";
+
+body {
+  // Styling
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  // Default color
+  background-color: #292828;
+  display: none;
+
+  // Animations
+  transition: 1s;
+}
+
+#content {
+  // Default colors
+  color: black;
+  background-color: white;
+
+  // Font
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Animations
+  transition: 1s;
+
+  // Styling
+  padding: 1rem;
+  & button {
+    display: none;
+  }
+
+  // Centering
+  margin: 0 auto;
+}
+
+nav {
+  text-align: center;
+  padding: 1rem;
+}
+
+#theme-circle {
+  display: flex;
+  // text-align: center;
+  & > #theme {
+    // Style
+    border-radius: 0;
+    border: 0;
+    padding: 0.2rem;
+    appearance: none;
+    // Animation
+    transition: 1s;
+    // Font
+    font-size: 1rem;
+  }
+  & > span {
+    flex: 1;
+    display: flex;
+    & > * {
+      flex: 1;
+    }
+  }
+}

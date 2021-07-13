@@ -6,9 +6,9 @@ First rename index to `{{{}}}` form, then
 # Build proj
 pnpm build
 # Move assets to server location (will also have to accompany the actual server)
-mv dist/assets ../text_frontend
+mv dist/assets ../book-backend
 # Move index.html.hbs to templates folder, rename to hbs
-mv dist/index.html ../text_frontend/templates/index.html.hbs
+mv dist/index.html ../book-backend/templates/index.html.hbs
 ```
 
 Overall, to run the final server, the following external resources will be needed (along w/ server binary)

@@ -1,0 +1,12 @@
+{
+    "include": [
+        "./build.ts"
+    ],
+    "compilerOptions": {
+        // "outFile": "./dist/build.js",
+        "outDir": "./dist",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "module": "commonjs"
+    }
+}

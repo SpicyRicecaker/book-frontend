@@ -1,0 +1,20 @@
+// Used media queries from https://getbootstrap.com/docs/3.4/css/
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+@media (min-width: $screen-sm-min) {
+  #content {
+    max-width: none;
+  }
+}
+@media (min-width: $screen-md-min) {
+  #content {
+    max-width: 50%;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  #content {
+    max-width: 30%;
+  }
+}

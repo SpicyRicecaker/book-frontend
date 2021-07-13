@@ -8,19 +8,29 @@
 </head>
 
 <body>
-  <label for="theme">Theme:</label>
-
-  <select name="theme" id="theme">
-    <option value="gruvbox-material-light" selected>Gruvbox Material Light</option>
-    <option value="gruvbox-material-dark">Gruvbox Material Dark</option>
-    <option value="solarized-light">Solarized Light</option>
-    <option value="solarized-dark">Solarized Dark</option>
-  </select>
   <div id="content">
-    {{{content}}}
-    <div>
+    <div id="book">
+      {{{content}}}
+    </div>
+    <nav id="nav">
       <a href="javascript:;" id="prev_chapter" prev="{{prev_chapter}}">Prev</a>
       <a href="javascript:;" id="next_chapter" next="{{next_chapter}}">Next</a>
+    </nav>
+    <div id="theme-circle">
+      <select name="theme" id="theme">
+        <option value="gruvbox-material-light" selected>Gruvbox Material Light</option>
+        <option value="gruvbox-material-dark">Gruvbox Material Dark</option>
+        <option value="solarized-light">Solarized Light</option>
+        <option value="solarized-dark">Solarized Dark</option>
+      </select>
+      <span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+      </span>
     </div>
   </div>
   <script type="module" src="/src/main.ts"></script>

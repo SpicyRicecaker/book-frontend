@@ -1,4 +1,5 @@
-import "./style.scss"
+import "./styles/style.scss"
+import { text } from "./html";
 
 const initTheme = () => {
   let themeElement = document.getElementById("theme");
@@ -9,6 +10,9 @@ const initTheme = () => {
   let content = document.getElementById("content");
   if (!content) { return }
   content.className = theme;
+  themeElement.className = theme;
+  (document.getElementById("theme-circle") as HTMLSelectElement).className = theme;
+
 
   themeElement.addEventListener("change", function () {
     // On any change, update local theme 
@@ -22,6 +26,8 @@ const initTheme = () => {
     let content = document.getElementById("content");
     if (!content) { return }
     content.className = theme;
+    (themeElement as HTMLElement).className = theme;
+    (document.getElementById("theme-circle") as HTMLSelectElement).className = theme;
   }
 }
 
@@ -50,7 +56,18 @@ const init = () => {
   // Initalize req
   initRequests();
 
+  // Add some filler text
   window.addEventListener("load", () => document.body.style.display = "block", { once: true });
 }
+
+// // Test func
+// (async () => {
+//   let book = document.getElementById("book");
+//   if (!book) { return };
+//   // let content = await fetch()
+//   let t = text.split("\n").join("<br><br>");;
+
+//   book.innerHTML = t;
+// })();
 
 init();

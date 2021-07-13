@@ -2,13 +2,19 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build-frontend": "tsc && vite build",
+    "build-build": "tsc --project tsconfig.move.json",
+    "build": "pnpm build-frontend && pnpm build-build",
+    "move-files": "node ./dist/build.js",
+    "test-move": "pnpm build-build && pnpm move-files",
+    "release": "pnpm build && pnpm move-files",
     "serve": "vite preview",
     "test": "pnpm build && simple-http-server dist --port=1234"
   },
   "devDependencies": {
+    "@types/node": "^16.3.1",
     "sass": "^1.35.2",
-    "typescript": "^4.3.2",
+    "typescript": "^4.3.5",
     "vite": "^2.4.2",
     "vite-plugin-handlebars": "^1.6.0"
   },
