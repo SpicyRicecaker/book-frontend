@@ -32,6 +32,7 @@ const initRequests = () => {
     let text = await res.text();
     console.log(text);
     // Then reload after page has successfully reloaded
+    window.scrollTo(0, 0);
     location.reload();
   };
   document.getElementById("next_chapter")?.addEventListener("click", async () => {
