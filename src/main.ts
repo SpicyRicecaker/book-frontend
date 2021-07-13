@@ -1,5 +1,5 @@
 import "./styles/style.scss"
-import { text } from "./html";
+// import { text } from "./html";
 
 const initTheme = () => {
   let themeElement = document.getElementById("theme");
