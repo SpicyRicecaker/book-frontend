@@ -1,9 +1,30 @@
+// Used media queries from https://getbootstrap.com/docs/3.4/css/
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+#content {
+  font-family: Helvetica;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: $screen-sm-min) {
+  #content {
+    max-width: none;
+  }
+}
+@media (min-width: $screen-md-min) {
+  #content {
+    max-width: 50%;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  #content {
+    max-width: 30%;
+  }
 }
