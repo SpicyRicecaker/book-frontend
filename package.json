@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "pnpm build && simple-http-server dist --port=1234"
   },
   "devDependencies": {
     "sass": "^1.35.2",
