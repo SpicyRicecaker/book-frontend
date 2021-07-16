@@ -21,6 +21,8 @@ import path from "path";
         await mkdir(templates, { recursive: true });
         // Move index html over to template folder
         await rename(path.join(__dirname, "index.html"), path.join(templates, "index.html.hbs"));
+        // Move books html over to template folder
+        await rename(path.join(__dirname, "books.html"), path.join(templates, "books.html.hbs"));
     } catch (err) {
         throw err;
     }
